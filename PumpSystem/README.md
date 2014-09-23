@@ -1,21 +1,21 @@
 AquaLife: Pump System
 ==
-    Version: 0.1 ALPHA
-    Author: James Dudeck
-    Project: [AquaLife]
-    
-    Description:
-    
-    This software has been designed to run on the Arduino UNO,
-    but can be run on any arduino with pin changes. This program
-    has been designed to control a two pump system. The secondary
-    pump provides a special, and experimental, purpose. For single
-    pump systems with manual min/max overflows, you do not need
-    to wire the sump relay.
-    
-    While this code may not be directly applicable to your grow
-    bed, you might find use of individual sections of code for
-    different parts of your system.
+Version: 0.1 ALPHA
+Author: James Dudeck
+Project: [AquaLife]
+
+Description:
+
+This software has been designed to run on the Arduino UNO,
+but can be run on any arduino with pin changes. This program
+has been designed to control a two pump system. The secondary
+pump provides a special, and experimental, purpose. For single
+pump systems with manual min/max overflows, you do not need
+to wire the sump relay.
+
+While this code may not be directly applicable to your grow
+bed, you might find use of individual sections of code for
+different parts of your system.
   
 Grow basin
 --
