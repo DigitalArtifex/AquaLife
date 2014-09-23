@@ -2,7 +2,7 @@ AquaLife: Pump System
 ==
     Version: 0.1 ALPHA
     Author: James Dudeck
-    Project: AquaLife
+    Project: [AquaLife]
     
     Description:
     
@@ -56,3 +56,5 @@ keep all of my modifications top-side :)
 
 I will try to keep this as simple as possible, so that it may
 be modified for other systems.
+
+[AquaLife]:https://www.facebook.com/groups/774109749313231/
