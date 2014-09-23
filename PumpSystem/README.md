@@ -1,7 +1,9 @@
 AquaLife: Pump System
 ==
 Version: 0.1 ALPHA
+
 Author: James Dudeck
+
 Project: [AquaLife]
 
 Description:
