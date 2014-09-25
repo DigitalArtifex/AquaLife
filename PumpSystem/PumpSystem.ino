@@ -241,6 +241,7 @@ void EndCycle()
 //next iteration.
 time_t RequestTimeSync() 
 { 
+  Serial.write(TIME_REQUEST);
   timeSync = true; 
   return 0;
 }
@@ -251,19 +252,20 @@ void SyncTime()
   {
     if(timeSync)
     {
-      Serial.write(TIME_REQUEST);
-      timeSync = false;
-    }
-    
-    if(Serial.find(TIME_HEADER))
-    {
-      unsigned long syncTime = Serial.parseInt();
-      
-      if(syncTime >= DEFAULT_TIME)
-        setTime(syncTime);
+      if(Serial.find(TIME_HEADER))
+      {
+        unsigned long syncTime = Serial.parseInt();
+        
+        if(syncTime >= DEFAULT_TIME)
+          setTime(syncTime);
+        
+        EEPROM_write(1, syncTime);
+        timeSync = false;
+      }
     }
   }
 }
+
 void UpdateCycle()
 {
   //If the sump pump is enabled, check the water level of
@@ -302,7 +304,6 @@ Setup/Loop
 
 void setup() 
 {
-  
   if(USE_SERIAL_TIME_SERVER)
   {
     Serial.begin(9600);
@@ -316,7 +317,7 @@ void setup()
 
 void loop() 
 {
-  // put your main code here, to run repeatedly:
+  SyncTime();
   UpdateCycle();
   delay(SYSTEM_DELAY);
 }
